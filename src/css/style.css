@@ -1,0 +1,176 @@
+@font-face {
+    font-family: EurostarRegularExtended;
+    src: url(../public/fonts/Eurostar_Regular_Extended.ttf);
+}
+@font-face {
+    font-family: FuturaBook;
+    src: url(../public/fonts/Futura-T-OT-Book_19064.ttf);
+}
+
+
+/* TOOLS / META */
+a:link, a:visited, a:active { color: #333; text-decoration: none; }
+a:hover { text-decoration: underline; }
+* { box-sizing: border-box; }
+
+html { text-align: center; min-height: 100%; position: relative;}
+#page-wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	display: table;
+	height: 100vh;
+}
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	z-index: -1
+}
+.gold { color: #EDAB31; }
+
+
+/* HEADER */
+.first-letter { background-color: #00a1ff; color: white; }
+header { font-family: EurostarRegularExtended; font-weight: bold; padding: 20px; }
+#logo {
+	font-size: 42px;
+	display: inline-block;
+	padding-left: 0.20em;
+	display: inline-block;
+	width: 100%;
+}
+#motto {
+	display: inline-block;
+	font-size: 17px;
+	color: #edab31;
+	margin-top: 10px;
+	display: inline-block;
+}
+
+/* MAIN NAV */
+nav#main { font-family: EurostarRegularExtended; margin: 5px; }
+nav#main div:not(.overlay) {
+	font-size: 19px;
+	height: 16vw;
+	line-height: 16vw;
+	border-bottom: 5px solid white;
+	cursor: pointer;
+	font-weight: bold;
+	vertical-align: middle;
+	z-index: 0;
+	border-radius: 20px;
+	overflow: hidden;
+	padding: 0;
+}
+nav#main>div.active .overlay { background-color: #EDAB31; }
+nav#main div.overlay { background-color: #ddd; opacity: 0.9; display: block; }
+nav#main>div:nth-child(even) { border-left: 5px solid white; }
+nav#main div.about { background: url(../public/img/building.jpg) no-repeat center center scroll; background-size: cover; }
+nav#main div.services { background: url(../public/img/drawing_brain.jpg) no-repeat center top scroll; background-size: cover; }
+nav#main div.people { background: url(../public/img/docs.jpg) no-repeat center center scroll; background-size: cover; }
+nav#main div.contact { background: url(../public/img/customer-service.jpg) no-repeat center center scroll; background-size: cover; }
+
+/* SERVICES */
+#services .hero {
+	background: url(../public/img/half.jpg) no-repeat center center scroll;
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+	height: 250px;
+	color: white;
+	font-family: EurostarRegularExtended;
+	padding: 35px 0;
+	overflow: hidden;
+	font-size: 16px;
+}
+#services .hero .overlay.first { opacity: 1; }
+#services .hero>div:not(.overlay):nth-child(3) { opacity: 0; position: relative; right: 100px; height: 34px; margin: 10px 0px;}
+#services .hero>div:not(.overlay):nth-child(4) { opacity: 0; position: relative; left: 100px; height: 68px; }
+#services .hero .overlay.smile { opacity: 0; background: url(../public/img/upsmile.jpg) no-repeat center center scroll; background-size: cover; }
+#services .hero .overlay.smile>div:nth-child(1) { opacity: 0; margin-top: 60px; color: #00a1ff; font-weight: bold; padding: 0 5% 0 100px; text-align: right; }
+#services .hero .overlay.smile>div:nth-child(2) { position: absolute; bottom: 30%; right: 0px; padding-right: 20%;}
+#services .hero .overlay.smile>div:nth-child(2)>div:first-child { 
+	opacity: 0;
+	color: #333;
+	font-size: 32px;
+	background: -moz-linear-gradient(left,  rgba(204,204,204,0) 1%, rgba(204,204,204,0) 38%, rgba(204,204,204,1) 78%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(204,204,204,0) 1%,rgba(204,204,204,0) 38%,rgba(204,204,204,1) 78%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(204,204,204,0) 1%,rgba(204,204,204,0) 38%,rgba(204,204,204,1) 78%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cccccc', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+}
+#services .hero .overlay.smile>div:nth-child(2)>div:last-child { color: #333; text-align: right; opacity: 0; }
+
+.list>div { padding: 15px; text-align: left; font-family: FuturaBook; }
+.list .mini-title { font-size: 32px; color: #00a1ff; text-align: left; }
+.list .desc { font-size: 1.2em; }
+
+
+/* FOOTER */
+footer {
+	width: 100%;
+	font-family: FuturaBook;
+	font-size: 16px;
+	height: auto;
+	display: table-row;
+	height: 75px;
+}
+footer a {
+	display: inline-block;
+	padding: 10px;
+}
+footer a:not(:last-child) {
+	border-right: 1px solid black
+}
+
+footer>div:last-child {
+	background-color: #dbdbdb;
+	display: inline-block;
+	border-radius: 20px 20px 0 0;
+}
+#copyright {
+	font-size: 18px;
+	color: #00a1ff;
+	letter-spacing: 0.05em;
+	margin-bottom: 8px;
+}
+
+/* RESPONSIVE QUERIES */
+@media (min-width: 545px) {
+	#services .hero .overlay.smile>div:nth-child(2)>div:first-child { font-size: 42px; }
+	#services .hero .overlay.smile>div:nth-child(3)>div:last-child { font-size: 36px; }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	nav#main div.overlay { display: block; opacity: 0.9;}
+	nav#main div:not(.overlay) { font-size: 22px; height: 120px; line-height: 120px;}
+	nav#main div:nth-child(even) { border-left: none; }
+	nav#main div:not(:first-child) { border-left: 5px solid white; }
+	#logo { width: calc(100% - 420px); text-align: left; padding: 0}
+	#motto { font-size: 26px }
+
+	footer a { width: 74px; }
+
+	#services .hero { height: 300px; font-size: 28px; }
+	#services .hero .overlay.smile>div:nth-child(1) { font-size: 21px; }
+	#services .hero .overlay.smile>div:nth-child(2) { bottom: 25%; }
+	#services .hero .overlay.smile>div:nth-child(2)>div:first-child { font-size: 54px; margin-right: 45px; }
+	#services .hero .overlay.smile>div:nth-child(3)>div:last-child { font-size: 36px; }
+
+	.list>div { background-color: white; margin: 30px 0 30px 0; padding: 0 30px 10px 30px; height: 100%}
+	.list>div:nth-child(2) { border-left: 1px solid #333; border-right: 1px solid #333; }
+	.list .mini-title {	font-size: 2.5em; text-align: center; margin-bottom: 15px;}
+	.list .desc { font-size: 1.4em; }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#services .hero .overlay.smile>div:nth-child(1) { font-size: 26px; }
+	#services .hero .overlay.smile>div:nth-child(2)>div:first-child { font-size: 60px; }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

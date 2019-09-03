@@ -1,0 +1,30 @@
+{
+  "name": "sereniate",
+  "version": "1.0.0",
+  "description": "Sereniate Inc. is the world's leading provider of first class neuro-hancement technology.",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phudlow/sereniate.git"
+  },
+  "keywords": [],
+  "author": "Patrick Hudlow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phudlow/sereniate/issues"
+  },
+  "homepage": "https://github.com/phudlow/sereniate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
