@@ -4,4 +4,4 @@
 Designed a responsive landing page for a hypothetical transhuman services company in the near future.
 
 ## Tech
-The animation sequencing on the hero was composed with GSAP’s Timeline library.  The resposive layout was created using a combination of Bootstrap's grid and CSS media queries.
+The animation sequencing on the hero was composed with GSAP’s Timeline library.  The responsive layout was created using a combination of Bootstrap's grid and CSS media queries.
